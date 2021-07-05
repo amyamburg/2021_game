@@ -20,8 +20,8 @@ namespace _2021_game
         {
             x = 10;
             y = 10;
-            width = 20;
-            height = 20;
+            width = 300;
+            height = 300;
             //planetImage contains the plane1.png image
             cupcakeImage = Properties.Resources.cupcake;
             cupcakeRec = new Rectangle(x, y, width, height);

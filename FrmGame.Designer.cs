@@ -1,7 +1,7 @@
 ﻿
 namespace _2021_game
 {
-    partial class Form1
+    partial class FrmGame
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,34 @@ namespace _2021_game
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.PnlGame = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // PnlGame
+            // 
+            this.PnlGame.BackColor = System.Drawing.Color.Silver;
+            this.PnlGame.Location = new System.Drawing.Point(0, 86);
+            this.PnlGame.Name = "PnlGame";
+            this.PnlGame.Size = new System.Drawing.Size(484, 475);
+            this.PnlGame.TabIndex = 0;
+            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
+            // FrmGame
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(484, 561);
+            this.Controls.Add(this.PnlGame);
+            this.Name = "FrmGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel PnlGame;
     }
 }
 

@@ -38,7 +38,7 @@ namespace _2021_game
 
         public void MoveCupcake()
         {
-            y += 5;
+            
 
             cupcakeRec.Location = new Point(x, y);
         }

@@ -14,13 +14,14 @@ namespace _2021_game
     {
         Graphics g; //declare a graphics object called g
         Cupcake[] cupcake = new Cupcake[7]; //create the object, planet1
-
+        Random yspeed = new Random();
         public FrmGame()
         {
             InitializeComponent();
             for (int i = 0; i < 7; i++)
             {
                 int x = 10 + (i * 71);
+       
                 cupcake[i] = new Cupcake(x);
             }
 
@@ -35,6 +36,9 @@ namespace _2021_game
             {
                 //call the Planet class's drawPlanet method to draw the images
                 cupcake[i].DrawCupcake(g);
+                // generate a random number from 5 to 20 and put it in rndmspeed
+                int rndmspeed = yspeed.Next(1, 60);
+                cupcake[i].y += rndmspeed;
             }
 
 

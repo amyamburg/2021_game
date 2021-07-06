@@ -39,5 +39,16 @@ namespace _2021_game
 
 
         }
+
+        private void TmrCupcake_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                cupcake[i].MoveCupcake();
+
+            }
+            PnlGame.Invalidate();//makes the paint event fire to redraw the panel
+        }
+
     }
 }

@@ -36,5 +36,12 @@ namespace _2021_game
             g.DrawImage(cupcakeImage, cupcakeRec);
         }
 
+        public void MoveCupcake()
+        {
+            y += 5;
+
+            cupcakeRec.Location = new Point(x, y);
+        }
+
     }
 }

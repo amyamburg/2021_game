@@ -29,7 +29,9 @@ namespace _2021_game
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PnlGame = new System.Windows.Forms.Panel();
+            this.TmrCupcake = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // PnlGame
@@ -40,6 +42,11 @@ namespace _2021_game
             this.PnlGame.Size = new System.Drawing.Size(484, 475);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
+            // TmrCupcake
+            // 
+            this.TmrCupcake.Enabled = true;
+            this.TmrCupcake.Tick += new System.EventHandler(this.TmrCupcake_Tick);
             // 
             // FrmGame
             // 
@@ -57,6 +64,7 @@ namespace _2021_game
         #endregion
 
         private System.Windows.Forms.Panel PnlGame;
+        private System.Windows.Forms.Timer TmrCupcake;
     }
 }
 

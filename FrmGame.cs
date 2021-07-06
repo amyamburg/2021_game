@@ -45,6 +45,12 @@ namespace _2021_game
             for (int i = 0; i < 7; i++)
             {
                 cupcake[i].MoveCupcake();
+                //if a planet reaches the bottom of the Game Area reposition it at the top
+                if (cupcake[i].y >= PnlGame.Height)
+                {
+                    cupcake[i].y = 10;
+                }
+
 
             }
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel

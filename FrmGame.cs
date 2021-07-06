@@ -13,11 +13,17 @@ namespace _2021_game
     public partial class FrmGame : Form
     {
         Graphics g; //declare a graphics object called g
-        Cupcake cupcake = new Cupcake(); //create the object, planet1
+        Cupcake[] cupcake = new Cupcake[7]; //create the object, planet1
 
         public FrmGame()
         {
             InitializeComponent();
+            for (int i = 0; i < 7; i++)
+            {
+                int x = 10 + (i * 71);
+                cupcake[i] = new Cupcake(x);
+            }
+
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
@@ -25,7 +31,12 @@ namespace _2021_game
             //get the graphics used to paint on the panel control
             g = e.Graphics;
             //call the Planet class's DrawPlanet method to draw the image planet1 
-            cupcake.DrawCupcake(g);
+            for (int i = 0; i < 7; i++)
+            {
+                //call the Planet class's drawPlanet method to draw the images
+                cupcake[i].DrawCupcake(g);
+            }
+
 
         }
     }

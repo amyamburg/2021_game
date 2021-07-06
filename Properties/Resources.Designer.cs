@@ -63,29 +63,9 @@ namespace _2021_game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cat {
-            get {
-                object obj = ResourceManager.GetObject("cat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap cupcake {
             get {
                 object obj = ResourceManager.GetObject("cupcake", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lettuce {
-            get {
-                object obj = ResourceManager.GetObject("lettuce", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

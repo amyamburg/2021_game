@@ -16,12 +16,12 @@ namespace _2021_game
         public Rectangle cupcakeRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
-        public Cupcake()
+        public Cupcake(int spacing)
         {
-            x = 10;
+            x = spacing;
             y = 10;
-            width = 300;
-            height = 300;
+            width = 35;
+            height = 35;
             //planetImage contains the plane1.png image
             cupcakeImage = Properties.Resources.cupcake;
             cupcakeRec = new Rectangle(x, y, width, height);
@@ -31,6 +31,8 @@ namespace _2021_game
         // Methods for the Planet class
         public void DrawCupcake(Graphics g)
         {
+            cupcakeRec = new Rectangle(x, y, width, height);
+
             g.DrawImage(cupcakeImage, cupcakeRec);
         }
 

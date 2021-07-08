@@ -61,5 +61,11 @@ namespace _2021_game
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
 
+        private void PnlGame_MouseMove(object sender, MouseEventArgs e)
+        {
+            cat.moveCat(e.X);
+            
+
+        }
     }
 }

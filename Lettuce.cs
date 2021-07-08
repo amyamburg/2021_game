@@ -2,46 +2,45 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Drawing;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace _2021_game
 {
-    class Cupcake
+    class Lettuce
     {
         // declare fields to use in the class
         public int x, y, width, height;//variables for the rectangle
-        public Image cupcakeImage;//variable for the planet's image
+        public Image lettuceImage;//variable for the planet's image
 
-        public Rectangle cupcakeRec;//variable for a rectangle to place our image in
+        public Rectangle lettuceRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
-        public Cupcake(int spacing)
+        public Lettuce(int spacing)
         {
             x = spacing;
             y = 10;
             width = 35;
             height = 35;
             //planetImage contains the plane1.png image
-            cupcakeImage = Properties.Resources.cupcake;
-            cupcakeRec = new Rectangle(x, y, width, height);
+            lettuceImage = Properties.Resources.lettuce;
+            lettuceRec = new Rectangle(x, y, width, height);
         }
 
 
         // Methods for the Planet class
-        public void DrawCupcake(Graphics g)
+        public void DrawLettuce(Graphics g)
         {
-            cupcakeRec = new Rectangle(x, y, width, height);
+            lettuceRec = new Rectangle(x, y, width, height);
 
-            g.DrawImage(cupcakeImage, cupcakeRec);
+            g.DrawImage(lettuceImage, lettuceRec);
         }
 
-        public void MoveCupcake()
+        public void MoveLettuce()
         {
-         
 
-            cupcakeRec.Location = new Point(x, y);
+
+            lettuceRec.Location = new Point(x, y);
         }
-
     }
 }

@@ -42,6 +42,7 @@ namespace _2021_game
             this.PnlGame.Size = new System.Drawing.Size(484, 475);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            this.PnlGame.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PnlGame_MouseMove);
             // 
             // TmrCupcake
             // 

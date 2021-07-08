@@ -19,7 +19,7 @@ namespace _2021_game
         public Cat()
         {
             x = 10;
-            y = 410;
+            y = 415;
             width = 60;
             height = 60;
             cat = Properties.Resources.cat;
@@ -31,6 +31,13 @@ namespace _2021_game
 
             g.DrawImage(cat, catRec);
         }
+        public void moveCat(int mouseX)
+        {
+            catRec.X = mouseX -(catRec.Width / 2);
+
+
+        }
+
 
     }
 }

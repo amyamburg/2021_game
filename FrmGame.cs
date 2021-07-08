@@ -15,6 +15,7 @@ namespace _2021_game
         Graphics g; //declare a graphics object called g
         Cupcake[] cupcake = new Cupcake[7]; //create the object, planet1
         Random yspeed = new Random();
+        Cat cat = new Cat();
         public FrmGame()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace _2021_game
                 int rndmspeed = yspeed.Next(1, 60);
                 cupcake[i].y += rndmspeed;
             }
-
+            cat.DrawCat(g);
 
         }
 

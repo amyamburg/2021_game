@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cat.cs" />
     <Compile Include="Cupcake.cs" />
     <Compile Include="FrmGame.cs">
       <SubType>Form</SubType>
@@ -82,13 +83,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\cupcake.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\pixil-frame-0.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lettuce.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cupcake.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

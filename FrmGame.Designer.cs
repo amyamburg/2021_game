@@ -36,7 +36,7 @@ namespace _2021_game
             // 
             // PnlGame
             // 
-            this.PnlGame.BackColor = System.Drawing.Color.Silver;
+            this.PnlGame.BackColor = System.Drawing.Color.White;
             this.PnlGame.Location = new System.Drawing.Point(0, 86);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(484, 475);

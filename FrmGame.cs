@@ -15,6 +15,7 @@ namespace _2021_game
         Graphics g; //declare a graphics object called g
         Cupcake[] cupcake = new Cupcake[7]; //create the object, planet1
         Random yspeed = new Random();
+        Random speed = new Random();
         Cat cat = new Cat();
         Lettuce[] lettuce = new Lettuce[7];
         public FrmGame()
@@ -42,8 +43,10 @@ namespace _2021_game
                 cupcake[i].DrawCupcake(g);
                 lettuce[i].DrawLettuce(g);
                 // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = yspeed.Next(1, 60);
+                int rndmspeed = yspeed.Next(0, 30);
                 cupcake[i].y += rndmspeed;
+                int rndmspeed1 = speed.Next(0, 15);
+                lettuce[i].y += rndmspeed1;
             }
             cat.DrawCat(g);
 

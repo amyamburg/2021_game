@@ -72,6 +72,22 @@ namespace _2021_game
 
         }
 
-        
+        private void TmrLettuce_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                lettuce[i].MoveLettuce();
+                //if a planet reaches the bottom of the Game Area reposition it at the top
+                if (lettuce[i].y >= PnlGame.Height)
+                {
+                    lettuce[i].y = 10;
+                }
+
+
+            }
+            PnlGame.Invalidate();//makes the paint event fire to redraw the panel
+
+
+        }
     }
 }

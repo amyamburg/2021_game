@@ -38,6 +38,7 @@ namespace _2021_game
 
         public void MoveLettuce()
         {
+            y += 5;
 
 
             lettuceRec.Location = new Point(x, y);

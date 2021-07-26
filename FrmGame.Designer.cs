@@ -35,6 +35,11 @@ namespace _2021_game
             this.TxtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.TxtScore = new System.Windows.Forms.TextBox();
+            this.BtnCheck = new System.Windows.Forms.Button();
+            this.BtnQuit = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LblLives = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PnlGame
@@ -71,17 +76,66 @@ namespace _2021_game
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 50);
+            this.label2.Location = new System.Drawing.Point(129, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Score";
+            // 
+            // TxtScore
+            // 
+            this.TxtScore.Location = new System.Drawing.Point(170, 50);
+            this.TxtScore.Name = "TxtScore";
+            this.TxtScore.Size = new System.Drawing.Size(100, 20);
+            this.TxtScore.TabIndex = 4;
+            // 
+            // BtnCheck
+            // 
+            this.BtnCheck.Location = new System.Drawing.Point(349, 50);
+            this.BtnCheck.Name = "BtnCheck";
+            this.BtnCheck.Size = new System.Drawing.Size(123, 23);
+            this.BtnCheck.TabIndex = 5;
+            this.BtnCheck.Text = "Check For High Score";
+            this.BtnCheck.UseVisualStyleBackColor = true;
+
+            // 
+            // BtnQuit
+            // 
+            this.BtnQuit.Location = new System.Drawing.Point(412, 15);
+            this.BtnQuit.Name = "BtnQuit";
+            this.BtnQuit.Size = new System.Drawing.Size(60, 23);
+            this.BtnQuit.TabIndex = 6;
+            this.BtnQuit.Text = "Quit";
+            this.BtnQuit.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(294, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Lives";
+            // 
+            // LblLives
+            // 
+            this.LblLives.AutoSize = true;
+            this.LblLives.Location = new System.Drawing.Point(346, 15);
+            this.LblLives.Name = "LblLives";
+            this.LblLives.Size = new System.Drawing.Size(13, 13);
+            this.LblLives.TabIndex = 8;
+            this.LblLives.Text = "3";
             // 
             // FrmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 561);
+            this.Controls.Add(this.LblLives);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.BtnQuit);
+            this.Controls.Add(this.BtnCheck);
+            this.Controls.Add(this.TxtScore);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtName);
@@ -101,6 +155,11 @@ namespace _2021_game
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtScore;
+        private System.Windows.Forms.Button BtnCheck;
+        private System.Windows.Forms.Button BtnQuit;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblLives;
     }
 }
 

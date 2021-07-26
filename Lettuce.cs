@@ -22,6 +22,7 @@ namespace _2021_game
             y = 10;
             width = 35;
             height = 35;
+
             //planetImage contains the plane1.png image
             lettuceImage = Properties.Resources.lettuce;
             lettuceRec = new Rectangle(x, y, width, height);
@@ -32,7 +33,6 @@ namespace _2021_game
         public void DrawLettuce(Graphics g)
         {
             lettuceRec = new Rectangle(x, y, width, height);
-
             g.DrawImage(lettuceImage, lettuceRec);
         }
 

@@ -16,6 +16,7 @@ namespace _2021_game
         Cupcake[] cupcake = new Cupcake[7]; //create the object, planet1
         Random yspeed = new Random();
         Cat cat = new Cat();
+        Lettuce[] lettuce = new Lettuce[7];
         public FrmGame()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace _2021_game
                 int x = 10 + (i * 71);
        
                 cupcake[i] = new Cupcake(x);
+                lettuce[i] = new Lettuce(x);
             }
 
         }
@@ -32,11 +34,13 @@ namespace _2021_game
         {
             //get the graphics used to paint on the panel control
             g = e.Graphics;
+            
             //call the Planet class's DrawPlanet method to draw the image planet1 
             for (int i = 0; i < 7; i++)
             {
                 //call the Planet class's drawPlanet method to draw the images
                 cupcake[i].DrawCupcake(g);
+                lettuce[i].DrawLettuce(g);
                 // generate a random number from 5 to 20 and put it in rndmspeed
                 int rndmspeed = yspeed.Next(1, 60);
                 cupcake[i].y += rndmspeed;
@@ -67,5 +71,7 @@ namespace _2021_game
             
 
         }
+
+        
     }
 }

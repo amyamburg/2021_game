@@ -18,6 +18,7 @@ namespace _2021_game
         Random speed = new Random();
         Cat cat = new Cat();
         Lettuce[] lettuce = new Lettuce[7];
+        int score, lives;
         public FrmGame()
         {
             InitializeComponent();
@@ -57,6 +58,15 @@ namespace _2021_game
             for (int i = 0; i < 7; i++)
             {
                 cupcake[i].MoveCupcake();
+                if (cat.catRec.IntersectsWith(cupcake[i].cupcakeRec))
+                {
+                    //reset planet[i] back to top of panel
+                    cupcake[i].y = 30; // set  y value of planetRec
+                    score += 1;// lose a life
+                    LblScore.Text = score.ToString();// display number of lives
+                    CheckLives();
+                }
+
                 //if a planet reaches the bottom of the Game Area reposition it at the top
                 if (cupcake[i].y >= PnlGame.Height)
                 {
@@ -80,6 +90,15 @@ namespace _2021_game
             for (int i = 0; i < 7; i++)
             {
                 lettuce[i].MoveLettuce();
+                if (cat.catRec.IntersectsWith(lettuce[i].lettuceRec))
+                {
+                    //reset planet[i] back to top of panel
+                    lettuce[i].y = 10; // set  y value of planetRec
+                    lives -= 1;// lose a life
+                    LblLives.Text = lives.ToString();// display number of lives
+                    CheckLives();
+                }
+
                 //if a planet reaches the bottom of the Game Area reposition it at the top
                 if (lettuce[i].y >= PnlGame.Height)
                 {
@@ -92,5 +111,24 @@ namespace _2021_game
 
 
         }
+
+        private void FrmGame_Load(object sender, EventArgs e)
+        {
+            // pass lives from LblLives Text property to lives variable
+            lives = int.Parse(LblLives.Text);
+
+        }
+
+        private void CheckLives()
+        {
+            if (lives == 0)
+            {
+                TmrLettuce.Enabled = false;
+                TmrCupcake.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+        }
+
     }
 }

@@ -19,6 +19,7 @@ namespace _2021_game
         Cat cat = new Cat();
         Lettuce[] lettuce = new Lettuce[7];
         int score, lives;
+        string username = "";
         public FrmGame()
         {
             InitializeComponent();
@@ -64,7 +65,7 @@ namespace _2021_game
                     cupcake[i].y = 30; // set  y value of planetRec
                     score += 1;// lose a life
                     LblScore.Text = score.ToString();// display number of lives
-                    CheckLives();
+                    
                 }
 
                 //if a planet reaches the bottom of the Game Area reposition it at the top
@@ -100,9 +101,12 @@ namespace _2021_game
                 }
 
                 //if a planet reaches the bottom of the Game Area reposition it at the top
+
+                Random rand = new Random();
+                int randomPos = rand.Next(-70, 10);
                 if (lettuce[i].y >= PnlGame.Height)
                 {
-                    lettuce[i].y = 10;
+                    lettuce[i].y = randomPos;
                 }
 
 
@@ -117,6 +121,24 @@ namespace _2021_game
             // pass lives from LblLives Text property to lives variable
             lives = int.Parse(LblLives.Text);
 
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+            string text = TxtName.Text;
+
+            if (text.Trim() == "") return;
+            for(int i = 0; i < text.Length; i++)
+            {
+                if(!char.IsLetter(text[i]))
+                {
+                    MessageBox.Show("use letters");
+                    TxtName.Text = "";
+                    return;
+                }
+            }
+
+            username = TxtName.Text;
         }
 
         private void CheckLives()

@@ -18,8 +18,11 @@ namespace _2021_game
         //Create a constructor (initialises the values of the fields)
         public Lettuce(int spacing)
         {
+
+            Random rand = new Random();
+            int randomPos = rand.Next(-600, -10);
             x = spacing;
-            y = 10;
+            y = randomPos;
             width = 35;
             height = 35;
 

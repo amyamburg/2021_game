@@ -64,6 +64,7 @@ namespace _2021_game
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(100, 20);
             this.TxtName.TabIndex = 1;
+            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // label1
             // 
@@ -117,7 +118,7 @@ namespace _2021_game
             this.LblLives.Name = "LblLives";
             this.LblLives.Size = new System.Drawing.Size(13, 13);
             this.LblLives.TabIndex = 8;
-            this.LblLives.Text = "3";
+            this.LblLives.Text = "9";
             // 
             // LblScore
             // 

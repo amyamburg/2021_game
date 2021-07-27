@@ -19,12 +19,10 @@ namespace _2021_game
         public Lettuce(int spacing)
         {
 
-            Random rand = new Random();
-            int randomPos = rand.Next(-600, -10);
-            x = spacing;
-            y = randomPos;
-            width = 35;
-            height = 35;
+             x = spacing;
+             y = -700;
+             width = 35;
+             height = 35;
 
             //planetImage contains the plane1.png image
             lettuceImage = Properties.Resources.lettuce;

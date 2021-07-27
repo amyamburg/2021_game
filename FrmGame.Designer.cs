@@ -41,6 +41,10 @@ namespace _2021_game
             this.LblLives = new System.Windows.Forms.Label();
             this.LblScore = new System.Windows.Forms.Label();
             this.TmrLettuce = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlGame
@@ -55,7 +59,6 @@ namespace _2021_game
             // 
             // TmrCupcake
             // 
-            this.TmrCupcake.Enabled = true;
             this.TmrCupcake.Tick += new System.EventHandler(this.TmrCupcake_Tick);
             // 
             // TxtName
@@ -131,8 +134,31 @@ namespace _2021_game
             // 
             // TmrLettuce
             // 
-            this.TmrLettuce.Enabled = true;
             this.TmrLettuce.Tick += new System.EventHandler(this.TmrLettuce_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuStart,
+            this.MnuStop});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(484, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MnuStart
+            // 
+            this.MnuStart.Name = "MnuStart";
+            this.MnuStart.Size = new System.Drawing.Size(43, 20);
+            this.MnuStart.Text = "Start";
+            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
+            // 
+            // MnuStop
+            // 
+            this.MnuStop.Name = "MnuStop";
+            this.MnuStop.Size = new System.Drawing.Size(43, 20);
+            this.MnuStop.Text = "Stop";
             // 
             // FrmGame
             // 
@@ -148,10 +174,14 @@ namespace _2021_game
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.PnlGame);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmGame_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +200,9 @@ namespace _2021_game
         private System.Windows.Forms.Label LblLives;
         private System.Windows.Forms.Label LblScore;
         private System.Windows.Forms.Timer TmrLettuce;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MnuStart;
+        private System.Windows.Forms.ToolStripMenuItem MnuStop;
     }
 }
 

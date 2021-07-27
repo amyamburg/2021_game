@@ -45,9 +45,9 @@ namespace _2021_game
                 cupcake[i].DrawCupcake(g);
                 lettuce[i].DrawLettuce(g);
                 // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = yspeed.Next(0, 30);
+                int rndmspeed = yspeed.Next(0, 31);
                 cupcake[i].y += rndmspeed;
-                int rndmspeed1 = speed.Next(0, 15);
+                int rndmspeed1 = speed.Next(0, 16);
                 lettuce[i].y += rndmspeed1;
             }
             cat.DrawCat(g);
@@ -121,6 +121,7 @@ namespace _2021_game
             // pass lives from LblLives Text property to lives variable
             lives = int.Parse(LblLives.Text);
 
+
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)
@@ -139,6 +140,18 @@ namespace _2021_game
             }
 
             username = TxtName.Text;
+        }
+
+        private void MnuStart_Click(object sender, EventArgs e)
+        {
+            score = 0;
+            LblScore.Text = score.ToString();
+            
+            
+            lives = 9;
+
+            TmrCupcake.Enabled = true;
+            TmrLettuce.Enabled = true;
         }
 
         private void CheckLives()

@@ -20,6 +20,7 @@ namespace _2021_game
         Lettuce[] lettuce = new Lettuce[7];
         int score, lives;
         string username = "";
+        bool paused = false;
         public FrmGame()
         {
             InitializeComponent();
@@ -146,12 +147,61 @@ namespace _2021_game
         {
             score = 0;
             LblScore.Text = score.ToString();
-            
-            
-            lives = 9;
 
+
+
+            easyToolStripMenuItem.Enabled = false;
+            mediumToolStripMenuItem.Enabled = false;
+            hardToolStripMenuItem.Enabled = false;
             TmrCupcake.Enabled = true;
             TmrLettuce.Enabled = true;
+        }
+
+        private void easyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lives = 9;
+            LblLives.Text = lives.ToString();
+            MessageBox.Show("Difficulty set to Easy");
+        }
+
+        private void mediumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lives = 6;
+            LblLives.Text = lives.ToString();
+            MessageBox.Show("Difficulty set to Medium");
+        }
+
+        private void hardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lives = 3;
+            LblLives.Text = lives.ToString();
+            MessageBox.Show("Difficulty set to Hard");
+        }
+
+        private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TmrCupcake.Enabled = false;
+            TmrLettuce.Enabled = false;
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            string title = "Paused";
+            DialogResult result  =  MessageBox.Show("Paused, click OK to unpause", title, buttons);
+
+           if(result == DialogResult.OK)
+            {
+                TmrCupcake.Enabled = true;
+                TmrLettuce.Enabled = true;
+            }
+        }
+
+        private void BtnQuit_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            string title = "Quit?";
+            DialogResult result = MessageBox.Show("Are you sure you want to quit?", title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void CheckLives()

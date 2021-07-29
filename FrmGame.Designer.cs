@@ -43,7 +43,11 @@ namespace _2021_game
             this.TmrLettuce = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectDifficultyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.easyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mediumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +67,7 @@ namespace _2021_game
             // 
             // TxtName
             // 
-            this.TxtName.Location = new System.Drawing.Point(170, 12);
+            this.TxtName.Location = new System.Drawing.Point(170, 34);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(100, 20);
             this.TxtName.TabIndex = 1;
@@ -72,7 +76,7 @@ namespace _2021_game
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 15);
+            this.label1.Location = new System.Drawing.Point(129, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
@@ -81,7 +85,7 @@ namespace _2021_game
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 50);
+            this.label2.Location = new System.Drawing.Point(129, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 3;
@@ -104,6 +108,7 @@ namespace _2021_game
             this.BtnQuit.TabIndex = 6;
             this.BtnQuit.Text = "Quit";
             this.BtnQuit.UseVisualStyleBackColor = true;
+            this.BtnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // label3
             // 
@@ -126,7 +131,7 @@ namespace _2021_game
             // LblScore
             // 
             this.LblScore.AutoSize = true;
-            this.LblScore.Location = new System.Drawing.Point(179, 53);
+            this.LblScore.Location = new System.Drawing.Point(179, 60);
             this.LblScore.Name = "LblScore";
             this.LblScore.Size = new System.Drawing.Size(13, 13);
             this.LblScore.TabIndex = 9;
@@ -140,7 +145,8 @@ namespace _2021_game
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnuStart,
-            this.MnuStop});
+            this.pauseToolStripMenuItem,
+            this.selectDifficultyToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(484, 24);
@@ -154,11 +160,43 @@ namespace _2021_game
             this.MnuStart.Text = "Start";
             this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
             // 
-            // MnuStop
+            // selectDifficultyToolStripMenuItem
             // 
-            this.MnuStop.Name = "MnuStop";
-            this.MnuStop.Size = new System.Drawing.Size(43, 20);
-            this.MnuStop.Text = "Stop";
+            this.selectDifficultyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.easyToolStripMenuItem,
+            this.mediumToolStripMenuItem,
+            this.hardToolStripMenuItem});
+            this.selectDifficultyToolStripMenuItem.Name = "selectDifficultyToolStripMenuItem";
+            this.selectDifficultyToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.selectDifficultyToolStripMenuItem.Text = "Select Difficulty";
+            // 
+            // easyToolStripMenuItem
+            // 
+            this.easyToolStripMenuItem.Name = "easyToolStripMenuItem";
+            this.easyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.easyToolStripMenuItem.Text = "Easy";
+            this.easyToolStripMenuItem.Click += new System.EventHandler(this.easyToolStripMenuItem_Click);
+            // 
+            // mediumToolStripMenuItem
+            // 
+            this.mediumToolStripMenuItem.Name = "mediumToolStripMenuItem";
+            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mediumToolStripMenuItem.Text = "Medium";
+            this.mediumToolStripMenuItem.Click += new System.EventHandler(this.mediumToolStripMenuItem_Click);
+            // 
+            // hardToolStripMenuItem
+            // 
+            this.hardToolStripMenuItem.Name = "hardToolStripMenuItem";
+            this.hardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hardToolStripMenuItem.Text = "Hard";
+            this.hardToolStripMenuItem.Click += new System.EventHandler(this.hardToolStripMenuItem_Click);
+            // 
+            // pauseToolStripMenuItem
+            // 
+            this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
+            this.pauseToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.pauseToolStripMenuItem.Text = "Pause";
+            this.pauseToolStripMenuItem.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
             // FrmGame
             // 
@@ -202,7 +240,11 @@ namespace _2021_game
         private System.Windows.Forms.Timer TmrLettuce;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MnuStart;
-        private System.Windows.Forms.ToolStripMenuItem MnuStop;
+        private System.Windows.Forms.ToolStripMenuItem selectDifficultyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem easyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mediumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem;
     }
 }
 

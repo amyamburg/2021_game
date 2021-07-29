@@ -54,11 +54,20 @@
     <Compile Include="FrmGame.Designer.cs">
       <DependentUpon>FrmGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHighScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHighScores.Designer.cs">
+      <DependentUpon>FrmHighScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lettuce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmGame.resx">
       <DependentUpon>FrmGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHighScores.resx">
+      <DependentUpon>FrmHighScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

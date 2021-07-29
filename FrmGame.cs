@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Reflection;
 namespace _2021_game
 {
     public partial class FrmGame : Form
@@ -24,6 +24,7 @@ namespace _2021_game
         public FrmGame()
         {
             InitializeComponent();
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PnlGame, new object[] { true });
             for (int i = 0; i < 7; i++)
             {
                 int x = 10 + (i * 71);
@@ -121,6 +122,8 @@ namespace _2021_game
         {
             // pass lives from LblLives Text property to lives variable
             lives = int.Parse(LblLives.Text);
+            MessageBox.Show("move your mouse left and right to move the cat left and right. \n Don't get hit by the cabbage! \n Every cupcake that the cat eats by touching scores a point. \n If a cabbage hits your cat, a life is lost! \n \n please select a difficulty before you press start, you can not change it after pressing start. \n Click Start to begin", "Cabbages, Cats and Cupcakes game Instructions");
+            TxtName.Focus();
 
 
         }

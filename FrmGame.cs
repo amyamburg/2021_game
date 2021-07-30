@@ -223,6 +223,10 @@ namespace _2021_game
                 TmrLettuce.Enabled = false;
                 TmrCupcake.Enabled = false;
                 MessageBox.Show("Game Over");
+                lives = 9;
+                easyToolStripMenuItem.Enabled = true;
+                mediumToolStripMenuItem.Enabled = true;
+                hardToolStripMenuItem.Enabled = true;
 
             }
         }

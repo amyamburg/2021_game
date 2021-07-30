@@ -35,6 +35,7 @@ namespace _2021_game
 
 
             }
+            reader.Close();
 
         }
         public void DisplayHighScores()
@@ -71,5 +72,25 @@ namespace _2021_game
             highScores = highScores.OrderByDescending(hs => hs.Score).Take(10).ToList();
         }
 
+        public void SaveHighScores()
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (HighScores score in highScores)
+            {
+                //{0} is for the Name, {1} is for the Score and {2} is for a new line
+                builder.Append(string.Format("{0},{1}{2}", score.Name, score.Score, Environment.NewLine));
+            }
+            File.WriteAllText(Path, builder.ToString());
+        }
+
+        private void BtnReturn_Click(object sender, EventArgs e)
+        {
+            SaveHighScores();
+
+            FrmGame FrmGame2 = new FrmGame();
+            Hide();
+            FrmGame2.ShowDialog();
+
+        }
     }
 }

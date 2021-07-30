@@ -83,6 +83,7 @@ namespace _2021_game
             this.BtnReturn.TabIndex = 7;
             this.BtnReturn.Text = "Return to Game";
             this.BtnReturn.UseVisualStyleBackColor = true;
+            this.BtnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
             // 
             // lstBoxName
             // 

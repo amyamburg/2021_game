@@ -34,8 +34,9 @@ namespace _2021_game
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnReturn = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lstBoxName = new System.Windows.Forms.ListBox();
+            this.lstBoxScore = new System.Windows.Forms.ListBox();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblPlayerName
@@ -83,29 +84,39 @@ namespace _2021_game
             this.BtnReturn.Text = "Return to Game";
             this.BtnReturn.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lstBoxName
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(42, 167);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(87, 199);
-            this.listBox1.TabIndex = 8;
+            this.lstBoxName.FormattingEnabled = true;
+            this.lstBoxName.Location = new System.Drawing.Point(42, 167);
+            this.lstBoxName.Name = "lstBoxName";
+            this.lstBoxName.Size = new System.Drawing.Size(87, 199);
+            this.lstBoxName.TabIndex = 8;
             // 
-            // listBox2
+            // lstBoxScore
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(155, 167);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(89, 199);
-            this.listBox2.TabIndex = 9;
+            this.lstBoxScore.FormattingEnabled = true;
+            this.lstBoxScore.Location = new System.Drawing.Point(155, 167);
+            this.lstBoxScore.Name = "lstBoxScore";
+            this.lstBoxScore.Size = new System.Drawing.Size(89, 199);
+            this.lstBoxScore.TabIndex = 9;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(50, 398);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(35, 13);
+            this.lblMessage.TabIndex = 10;
+            this.lblMessage.Text = "label1";
             // 
             // FrmHighScores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 536);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.lstBoxScore);
+            this.Controls.Add(this.lstBoxName);
             this.Controls.Add(this.BtnReturn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -113,6 +124,7 @@ namespace _2021_game
             this.Controls.Add(this.LblPlayerName);
             this.Name = "FrmHighScores";
             this.Text = "High Scores";
+            this.Load += new System.EventHandler(this.FrmHighScores_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,7 +137,8 @@ namespace _2021_game
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnReturn;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lstBoxName;
+        private System.Windows.Forms.ListBox lstBoxScore;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

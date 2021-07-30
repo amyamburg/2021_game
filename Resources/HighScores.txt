@@ -1,0 +1,10 @@
+Lynda,90
+harry,80
+Nigel,74
+Reginald,70
+Mary,65
+Ken,60
+Addy,50
+Di,40
+Fred,30
+Neville,20

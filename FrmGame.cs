@@ -207,6 +207,15 @@ namespace _2021_game
             }
         }
 
+        private void BtnCheck_Click(object sender, EventArgs e)
+        {
+            FrmHighScores FrmHighScore2 = new FrmHighScores(TxtName.Text, LblScore.Text);
+            Hide();
+            FrmHighScore2.ShowDialog();
+
+
+        }
+
         private void CheckLives()
         {
             if (lives == 0)

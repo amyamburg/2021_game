@@ -77,12 +77,13 @@ namespace _2021_game
             // 
             // BtnReturn
             // 
+            this.BtnReturn.BackColor = System.Drawing.Color.Pink;
             this.BtnReturn.Location = new System.Drawing.Point(306, 135);
             this.BtnReturn.Name = "BtnReturn";
             this.BtnReturn.Size = new System.Drawing.Size(110, 34);
             this.BtnReturn.TabIndex = 7;
             this.BtnReturn.Text = "Return to Game";
-            this.BtnReturn.UseVisualStyleBackColor = true;
+            this.BtnReturn.UseVisualStyleBackColor = false;
             this.BtnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
             // 
             // lstBoxName
@@ -104,6 +105,7 @@ namespace _2021_game
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
+            this.lblMessage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblMessage.Location = new System.Drawing.Point(50, 398);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(35, 13);
@@ -114,6 +116,7 @@ namespace _2021_game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(428, 536);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.lstBoxScore);

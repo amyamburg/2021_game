@@ -67,6 +67,7 @@ namespace _2021_game
             // 
             // TxtName
             // 
+            this.TxtName.BackColor = System.Drawing.Color.Pink;
             this.TxtName.Location = new System.Drawing.Point(170, 34);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(100, 20);
@@ -93,22 +94,24 @@ namespace _2021_game
             // 
             // BtnCheck
             // 
+            this.BtnCheck.BackColor = System.Drawing.Color.Pink;
             this.BtnCheck.Location = new System.Drawing.Point(349, 50);
             this.BtnCheck.Name = "BtnCheck";
             this.BtnCheck.Size = new System.Drawing.Size(123, 23);
             this.BtnCheck.TabIndex = 5;
             this.BtnCheck.Text = "Check For High Score";
-            this.BtnCheck.UseVisualStyleBackColor = true;
+            this.BtnCheck.UseVisualStyleBackColor = false;
             this.BtnCheck.Click += new System.EventHandler(this.BtnCheck_Click);
             // 
             // BtnQuit
             // 
+            this.BtnQuit.BackColor = System.Drawing.Color.Pink;
             this.BtnQuit.Location = new System.Drawing.Point(412, 15);
             this.BtnQuit.Name = "BtnQuit";
             this.BtnQuit.Size = new System.Drawing.Size(60, 23);
             this.BtnQuit.TabIndex = 6;
             this.BtnQuit.Text = "Quit";
-            this.BtnQuit.UseVisualStyleBackColor = true;
+            this.BtnQuit.UseVisualStyleBackColor = false;
             this.BtnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // label3
@@ -144,6 +147,7 @@ namespace _2021_game
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LavenderBlush;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnuStart,
             this.pauseToolStripMenuItem,
@@ -203,6 +207,7 @@ namespace _2021_game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(484, 561);
             this.Controls.Add(this.LblScore);
             this.Controls.Add(this.LblLives);

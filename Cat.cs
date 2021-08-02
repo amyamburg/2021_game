@@ -11,13 +11,14 @@ namespace _2021_game
         // declare fields to use in the class
 
         public int x, y, width, height;//variables for the rectangle
-        public Image cat;//variable for the planet's image
+        public Image cat;//variable for the cat's image
 
         public Rectangle catRec;//variable for a rectangle to place our image in
 
         //Create a constructor (initialises the values of the fields)
         public Cat()
         {
+            //size of the cat
             x = 10;
             y = 415;
             width = 60;
@@ -28,10 +29,10 @@ namespace _2021_game
         //methods
         public void DrawCat(Graphics g)
         {
-
+            //draw the cat
             g.DrawImage(cat, catRec);
         }
-        public void moveCat(int mouseX)
+        public void moveCat(int mouseX) //move the cat to the x axis of the mouse
         {
             catRec.X = mouseX -(catRec.Width / 2);
 
